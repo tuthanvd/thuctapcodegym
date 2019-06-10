@@ -10,36 +10,45 @@ namespace TTNN_gameLine98
         MyPanel panel;
         Timer timer;
 
-        public TimeThread(MyPanel panel)
-        {
-            this.panel = panel;
-            timer = new Timer();
-            timer.Interval = 1000;
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
-        }
+		/*
+		vòng lặp giây stack theo mỗi 1000 mili giây
+		*/
+		public TimeThread(MyPanel panel) //vòng lặp giây
+		{
+			this.panel = panel;
+			timer = new Timer();
+			timer.Interval = 1000;
+			timer.Tick += new EventHandler(timer_Tick);
+			timer.Start();
+		}
 
-        void timer_Tick(object sender, EventArgs e)
-        {
-            panel.gameShape.seconds++;
-            if (panel.gameShape.seconds == 60)
-            {
-                panel.gameShape.seconds = 0;
-                panel.gameShape.minutes++;
-                if (panel.gameShape.minutes == 60)
-                {
-                    panel.gameShape.minutes = 0;
-                    panel.gameShape.hours++;
-                }
-            }
-            panel.repaintHour(panel.gameShape.hours);
-            panel.repaintMinutes(panel.gameShape.minutes);
-            panel.repaintSeconds(panel.gameShape.seconds);
-        }
-
-        public void Stop()
-        {
-            timer.Stop();
-        }
-    }
+		/*
+		sau mỗi 60 giây sẽ chuyển thành 1 phút, 60 phút thành 1 giờ
+		*/
+		void timer_Tick(object sender, EventArgs e) //hàm chuyển giây sang phút
+		{
+			panel.gameShape.seconds++;
+			if (panel.gameShape.seconds == 60)
+			{
+				panel.gameShape.seconds = 0;
+				panel.gameShape.minutes++;
+				if (panel.gameShape.minutes == 60)
+				{
+					panel.gameShape.minutes = 0;
+					panel.gameShape.hours++;
+				}
+			}
+			panel.repaintHour(panel.gameShape.hours);
+			panel.repaintMinutes(panel.gameShape.minutes);
+			panel.repaintSeconds(panel.gameShape.seconds);
+		}
+		
+		/*
+		tạm dừng chơi game
+		*/
+		public void Stop() //tạm dừng
+		{
+			timer.Stop();
+		}
+	}
 }
