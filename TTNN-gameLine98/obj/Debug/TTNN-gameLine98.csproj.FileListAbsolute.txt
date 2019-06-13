@@ -1,0 +1,6 @@
+E:\project\TTNN-gameLine98\TTNN-gameLine98\obj\Debug\TTNN-gameLine98.csprojResolveAssemblyReference.cache
+E:\project\TTNN-gameLine98\TTNN-gameLine98\obj\Debug\TTNN_gameLine98.Form1.resources
+E:\project\TTNN-gameLine98\TTNN-gameLine98\obj\Debug\TTNN_gameLine98.Properties.Resources.resources
+E:\project\TTNN-gameLine98\TTNN-gameLine98\obj\Debug\TTNN-gameLine98.csproj.GenerateResource.Cache
+E:\project\TTNN-gameLine98\TTNN-gameLine98\obj\Debug\TTNN_gameLine98.MainForm.resources
+E:\project\TTNN-gameLine98\TTNN-gameLine98\obj\Debug\TTNN_gameLine98.WhatsYourName.resources
